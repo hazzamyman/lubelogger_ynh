@@ -7,7 +7,7 @@
 #=================================================
 # PERSONAL HELPERS
 #=================================================
-_download_vaultwarden_from_docker() {
+_download_lubelogger_from_docker() {
     docker_image="hargata/lubelogger"
     debian=$(lsb_release --codename --short)
     if [[ $debian = "bullseye" ]]; then
