@@ -11,6 +11,7 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 source _common.sh
+source ynh_docker_image_extract
 source /usr/share/yunohost/helpers
 
 # Install parameters are automatically saved as settings
@@ -44,6 +45,8 @@ source /usr/share/yunohost/helpers
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression --message="Setting up source files..."
+
+_download_lubelogger_from_docker
 
 ### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
 ### downloaded from an upstream source, as defined in the manifest.toml
