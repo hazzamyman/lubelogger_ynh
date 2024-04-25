@@ -12,6 +12,7 @@
 #=================================================
 
 source _common.sh
+source ynh_docker_image_extract
 source /usr/share/yunohost/helpers
 
 # Settings are automatically loaded as bash variables
@@ -78,11 +79,8 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..."
 
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir" --full_replace=1  --keep=".env"
-
+	_download_lubelogger_from_docker
 fi
-
 # $install_dir will automatically be initialized with some decent
 # permission by default ... however, you may need to recursively reapply
 # ownership to all files such as after the ynh_setup_source step
