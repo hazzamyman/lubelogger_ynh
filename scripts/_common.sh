@@ -8,7 +8,7 @@
 # PERSONAL HELPERS
 #=================================================
 _download_lubelogger_from_docker() {
-    docker_image="hargata/lubelogger"
+    docker_image="hargata/lubelogger:latest"
     debian=$(lsb_release --codename --short)
     if [[ $debian = "bullseye" ]]; then
         docker_version="$(ynh_app_upstream_version)"
