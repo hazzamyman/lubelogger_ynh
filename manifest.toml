@@ -56,7 +56,7 @@ ram.runtime = "50M"
         #    ynh_setup_source --dest_dir="$install_dir"
         # You can also define other assets than "main" and add --source_id="foobar" in the previous command
         url = "https://github.com/hargata/lubelog/archive/refs/tags/v1.3.0.tar.gz"
-        sha256 = "A0EC6A1E0A21CA5B9FF66489AD36CBA84A5825F77A3827B21DB28A46F0BFBE45"
+        sha256 = "a0ec6a1e0a21ca5b9ff66489ad36cba84a5825f77a3827b21db28a46f0bfbe45"
 
         # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
         # to auto-update the previous asset urls and sha256sum + manifest version
