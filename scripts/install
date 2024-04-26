@@ -51,13 +51,13 @@ _download_lubelogger_from_docker
 ### `ynh_setup_source` is used to install an app from a zip or tar.gz file,
 ### downloaded from an upstream source, as defined in the manifest.toml
 
-ynh_setup_source --dest_dir="$install_dir"
+#ynh_setup_source --dest_dir="$install_dir"
 
 # $install_dir will automatically be initialized with some decent
 # permission by default ... however, you may need to recursively reapply
 # ownership to all files such as after the ynh_setup_source step
 
-chown -R $app:www-data "$install_dir"
+#chown -R $app:www-data "$install_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -115,7 +115,7 @@ ynh_script_progression --message="Adding app's configuration file..."
 ###
 ### Check the documentation of `ynh_add_config` for more info.
 
-ynh_add_config --template="" --destination="$install_dir/"
+#ynh_add_config --template="" --destination="$install_dir/"
 
 # FIXME: this should be handled by the core in the future
 # You may need to use chmod 600 instead of 400,
@@ -135,9 +135,9 @@ chown $app:$app "$install_dir/"
 #=================================================
 ynh_script_progression --message="Installing app..." --weight=5
 
-pushd $install_dir
-some_command --build
-popd
+#pushd $install_dir
+#some_command --build
+#popd
 
 #=================================================
 # FINALIZE APP INSTALL WITH CURL
